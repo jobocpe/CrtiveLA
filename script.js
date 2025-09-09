@@ -1,25 +1,128 @@
-// Carousel logic (same as before) ...
-// Swipe support (same as before) ...
-// Chart.js (same as before) ...
-
-// Theme toggle
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
-
-// Check saved preference
-if (localStorage.getItem("theme") === "light") {
-  body.classList.add("light-mode");
-  themeToggle.textContent = "🌙 Dark Mode";
+/* Theme Variables */
+:root {
+  --bg-color: #111;
+  --text-color: #eee;
+  --header-bg: #222;
+  --button-bg: #444;
+  --button-text: #fff;
 }
 
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("light-mode");
+/* Light Mode Variables */
+.light-mode {
+  --bg-color: #fdfdfd;
+  --text-color: #111;
+  --header-bg: #e5e5e5;
+  --button-bg: #ccc;
+  --button-text: #111;
+}
 
-  if (body.classList.contains("light-mode")) {
-    themeToggle.textContent = "🌙 Dark Mode";
-    localStorage.setItem("theme", "light");
-  } else {
-    themeToggle.textContent = "🌙 Light Mode";
-    localStorage.setItem("theme", "dark");
+/* Apply theme */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--header-bg);
+  padding: 2rem;
+  transition: background 0.3s;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+button#theme-toggle {
+  margin-top: 1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Social links */
+#socials .social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #1da1f2;
+  font-weight: bold;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 900px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-track iframe {
+  min-width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* Carousel buttons */
+button.prev, button.next {
+  background: var(--button-bg);
+  border: none;
+  color: var(--button-text);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: background 0.3s, color 0.3s;
+}
+button.prev { left: 0; }
+button.next { right: 0; }
+
+/* Chart */
+#charts {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--header-bg);
+  padding: 1rem;
+  margin-top: 2rem;
+  transition: background 0.3s;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
-});
+
+  .carousel-track iframe {
+    height: 220px;
+  }
+
+  button.prev, button.next {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
