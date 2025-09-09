@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "PodcastSeries",
-  "name": "crtive.la Podcast",
-  "url": "https://jobocpe.github.io/crtive.la/",
-  "description": "crtive.la Podcast explores the life journeys of artists, dreamers, and creators through in-depth conversations.",
-  "inLanguage": "en",
-  "publisher": {
-    "@type": "Organization",
-    "name": "crtive.la"
-  },
-  "sameAs": [
-    "https://twitter.com/crtivela",
-    "https://instagram.com/crtivela",
-    "https://youtube.com/crtivela"
-  ]
-}
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crtive.LA Podcast | Conversations with Artists & Creators</title>
+  <title>crtive.la Podcast | Conversations with Artists & Creators</title>
 
   <!-- Meta Description -->
   <meta name="description" content="crtive.la Podcast explores the life journeys of artists, dreamers, and creators through in-depth conversations. Watch episodes, follow us on social, and get inspired.">
 
-  <!-- Open Graph (for Facebook, LinkedIn) -->
-  <meta property="og:title" content="Crtive.LA Podcast">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://crtive.la/">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:title" content="crtive.la Podcast">
   <meta property="og:description" content="Exploring the life journeys of artists, dreamers, and creators.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jobocpe.github.io/crtive.la/">
-  <meta property="og:image" content="https://jobocpe.github.io/crtive.la/images/preview.PNG">
+  <meta property="og:url" content="https://crtive.la/">
+  <meta property="og:image" content="https://crtive.la/preview.jpg">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Crtive.LA Podcast">
+  <meta name="twitter:title" content="crtive.la Podcast">
   <meta name="twitter:description" content="Exploring the life journeys of artists, dreamers, and creators.">
-  <meta name="twitter:image" content="https://jobocpe.github.io/crtive.la/images/preview.PNG">
+  <meta name="twitter:image" content="https://crtive.la/preview.jpg">
+  <meta name="twitter:site" content="@crtivela">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  
+
+  <!-- Schema.org JSON-LD for Podcast -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "PodcastSeries",
+    "name": "crtive.la Podcast",
+    "url": "https://crtive.la/",
+    "description": "crtive.la Podcast explores the life journeys of artists, dreamers, and creators through in-depth conversations.",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "crtive.la"
+    },
+    "sameAs": [
+      "https://twitter.com/crtivela",
+      "https://instagram.com/crtivela",
+      "https://youtube.com/@crtivela"
+    ]
+  }
+  </script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "PodcastSeries",
-  "name": "crtive.la Podcast",
-  "url": "https://jobocpe.github.io/crtive.la/",
-  "description": "crtive.la Podcast explores the life journeys of artists, dreamers, and creators through in-depth conversations.",
-  "inLanguage": "en",
-  "publisher": {
-    "@type": "Organization",
-    "name": "crtive.la"
-  },
-  "sameAs": [
-    "https://twitter.com/crtivela",
-    "https://instagram.com/crtivela",
-    "https://youtube.com/crtivela"
-  ]
-}
-</script>
 </head>
 <body>
   <header>
-    <h1>🎙 Crtive.LA Podcast</h1>
+    <h1>🎙 crtive.la Podcast</h1>
     <p>Exploring the life journeys of artists, creators & dreamers.</p>
     <button id="theme-toggle">🌙 Light Mode</button>
+    <nav>
+      <a href="#latest-episode">Latest</a>
+      <a href="#videos">Episodes</a>
+      <a href="#charts">Our Reach</a>
+      <a href="#socials">Follow</a>
+    </nav>
   </header>
 
   <!-- Latest Episode Hero -->
@@ -79,7 +72,9 @@
       <!-- Replace VIDEO_ID_LATEST with your newest YouTube video -->
       <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" 
               frameborder="0" 
-              allowfullscreen></iframe>
+              loading="lazy"
+              allowfullscreen 
+              title="Latest crtive.la Podcast Episode"></iframe>
     </div>
     <p class="episode-description">
       🎨 This week we sit down with <strong>Guest Name</strong> to explore their journey from 
@@ -91,9 +86,9 @@
   <section id="socials">
     <h2>Follow Us</h2>
     <div class="social-links">
-      <a href="https://twitter.com/crtivela" target="_blank">Twitter</a>
-      <a href="https://instagram.com/crtivela" target="_blank">Instagram</a>
-      <a href="https://youtube.com/@crtivela" target="_blank">YouTube</a>
+      <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">YouTube</a>
     </div>
   </section>
 
@@ -101,25 +96,25 @@
   <section id="videos">
     <h2>Watch More Episodes</h2>
     <div class="carousel">
-      <button class="prev">⟨</button>
+      <button class="prev" aria-label="Previous video">⟨</button>
       <div class="carousel-track">
         <!-- Replace with your video IDs -->
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 1"></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 2"></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 3"></iframe>
       </div>
-      <button class="next">⟩</button>
+      <button class="next" aria-label="Next video">⟩</button>
     </div>
   </section>
 
   <!-- Chart Section -->
   <section id="charts">
     <h2>Our Reach</h2>
-    <canvas id="socialChart"></canvas>
+    <canvas id="socialChart" aria-label="Social media followers chart" role="img"></canvas>
   </section>
 
   <footer>
-    <p>© 2025 Crtive.LA Podcast</p>
+    <p>© 2025 crtive.la Podcast</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
