@@ -51,15 +51,102 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Follow Us Section Styling */
+    #socials-top {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    #socials-top h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a img {
+      width: 80px;   /* larger icons */
+      height: 80px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .social-links a img:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 600px) {
+      .social-links a img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    /* Basic header & navigation styling */
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .hero-video iframe {
+      width: 100%;
+      height: 500px;
+      max-width: 900px;
+    }
+
+    .carousel-track iframe {
+      width: 300px;
+      height: 170px;
+      margin: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Crtive.LA Podcast</h1>
     <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
+
+    <!-- Follow Us Section at the top -->
+    <section id="socials-top">
+      <h2>Follow Us</h2>
+      <div class="social-links">
+        <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
+          <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+          <img src="images/youtube.png" alt="YouTube">
+        </a>
+      </div>
+    </section>
+
     <nav>
       <a href="#latest-episode">Latest</a>
       <a href="#videos">Episodes</a>
-      <a href="#socials">Follow</a>
     </nav>
   </header>
 
@@ -77,16 +164,6 @@
       🎨 This week we sit down with <strong>Guest Name</strong> to explore their journey from 
       humble beginnings to breakthrough success. 
     </p>
-  </section>
-
-  <!-- Social Media Links -->
-  <section id="socials">
-    <h2>Follow Us</h2>
-    <div class="social-links">
-      <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">Twitter</a>
-      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">YouTube</a>
-    </div>
   </section>
 
   <!-- Video Carousel -->
