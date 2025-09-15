@@ -5,96 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crtive.LA | Stories Behind the Work</title>
 
-  <!-- Meta Description -->
   <meta name="description" content="Crtive.LA: Stories Behind the Work. Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://crtive.la/">
-
+  <!-- Newspaper Style CSS -->
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Times New Roman', Times, serif;
+      background: #fdf8f0;
+      color: #111;
       margin: 0;
       padding: 0;
-      background-color: #fdfdfd;
-      color: #111;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
       text-align: center;
       padding: 2rem 1rem 1rem;
-      background: #f4f4f4;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid #bbb;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-top: 0;
+      color: #333;
     }
     nav {
       display: inline-block;
+      margin: 1rem 0;
       background: #222;
       padding: 0.75rem 1.5rem;
-      border-radius: 4px;
+      border-radius: 5px;
     }
     nav a {
       margin: 0 1rem;
-      text-decoration: none;
+      color: #fff;
       font-weight: bold;
       font-size: 1.2rem;
-      color: #fff;
+      text-decoration: none;
       padding: 0.4rem 0.6rem;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+      border-radius: 3px;
+      transition: background 0.3s;
     }
     nav a:hover {
       background: #555;
-      text-decoration: none;
     }
     .tickets {
-      text-align: center;
       margin: 1.5rem 0 2rem;
     }
     .tickets a {
-      display: inline-block;
       background: #222;
       color: #fff;
-      padding: 0.75rem 1.5rem;
       text-decoration: none;
-      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 4px;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s;
     }
     .tickets a:hover {
-      background: #444;
+      background: #555;
     }
     .social-links {
       text-align: center;
       margin: 2rem 0;
     }
     .social-links img {
-      width: 60px; /* reduced by 25% */
+      width: 60px; /* 25% smaller */
       height: 60px;
       margin: 0 0.75rem;
       vertical-align: middle;
     }
-    .about {
-      background: #f9f9f9;
-      padding: 2rem 1.5rem;
-      border-top: 2px solid #ccc;
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 1rem;
     }
-    .about h2 {
+    h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+    .hero-video, .carousel-track {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 340px;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    .about {
+      background: #f7f2e8;
+      padding: 2rem 1rem;
+      border-top: 2px solid #bbb;
+    }
     .about p {
-      max-width: 800px;
-      margin: 0 auto 1rem;
       text-align: justify;
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
+      border-top: 2px solid #bbb;
       font-size: 0.9rem;
       color: #555;
     }
@@ -103,16 +121,21 @@
 <body>
   <header>
     <h1>Crtive.LA</h1>
+    <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
+
+    <!-- Navigation above ticket button -->
     <nav>
       <a href="#about">About</a>
       <a href="https://www.youtube.com/@crtivela" target="_blank" rel="noopener">Episodes</a>
       <a href="https://www.instagram.com/crtivela" target="_blank" rel="noopener">Photos</a>
     </nav>
+
     <div class="tickets">
       <a href="#">Get Tickets</a>
     </div>
   </header>
 
+  <!-- Social Links at the top -->
   <div class="social-links">
     <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
@@ -125,6 +148,28 @@
     </a>
   </div>
 
+  <!-- Latest Episode Section -->
+  <section id="latest-episode">
+    <h2>Latest Episode</h2>
+    <div class="hero-video">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" loading="lazy" allowfullscreen title="Latest crtive.la Episode"></iframe>
+    </div>
+    <p>
+      🎨 This week we sit down with <strong>Guest Name</strong> to explore their journey from humble beginnings to breakthrough success.
+    </p>
+  </section>
+
+  <!-- Video Carousel -->
+  <section id="videos">
+    <h2>Watch More Episodes</h2>
+    <div class="carousel-track">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" loading="lazy" allowfullscreen title="crtive.la Episode 1"></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" loading="lazy" allowfullscreen title="crtive.la Episode 2"></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" loading="lazy" allowfullscreen title="crtive.la Episode 3"></iframe>
+    </div>
+  </section>
+
+  <!-- About Section -->
   <section id="about" class="about">
     <h2>About Crtive.LA</h2>
     <p>
