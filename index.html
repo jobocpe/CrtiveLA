@@ -11,135 +11,90 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://crtive.la/">
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="Crtive.LA | Stories Behind the Work">
-  <meta property="og:description" content="Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://crtive.la/">
-  <meta property="og:image" content="https://crtive.la/images/preview.PNG">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Crtive.LA | Stories Behind the Work">
-  <meta name="twitter:description" content="Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
-  <meta name="twitter:image" content="https://crtive.la/images/preview.PNG">
-  <meta name="twitter:site" content="@crtivela">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "PodcastSeries",
-    "name": "Crtive.LA | Stories Behind the Work",
-    "url": "https://crtive.la/",
-    "description": "Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.",
-    "inLanguage": "en",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Crtive.LA"
-    },
-    "sameAs": [
-      "https://twitter.com/crtivela",
-      "https://instagram.com/crtivela",
-      "https://youtube.com/@crtivela"
-    ]
-  }
-  </script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
   <style>
-    #socials-top {
-      text-align: center;
-      margin: 30px 0;
-    }
-    #socials-top h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .social-links a img {
-      width: 80px;   
-      height: 80px;
-      transition: transform 0.3s, filter 0.3s;
-    }
-    .social-links a img:hover {
-      transform: scale(1.2);
-      filter: brightness(1.2);
-    }
-    @media (max-width: 600px) {
-      .social-links a img {
-        width: 60px;
-        height: 60px;
-      }
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #111;
+      line-height: 1.6;
     }
     header {
       text-align: center;
-      padding: 20px;
+      padding: 2rem 1rem 1rem;
+      background: #f4f4f4;
+      border-bottom: 2px solid #ccc;
     }
-    header nav a {
-      margin: 0 15px;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    nav {
+      display: inline-block;
+      background: #222;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+    }
+    nav a {
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
-      color: #111;
+      font-size: 1.2rem;
+      color: #fff;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
     }
-    .hero-video iframe {
-      width: 100%;
-      height: 500px;
-      max-width: 900px;
+    nav a:hover {
+      background: #555;
+      text-decoration: none;
     }
-    .carousel-track iframe {
-      width: 300px;
-      height: 170px;
-      margin: 10px;
+    .tickets {
+      text-align: center;
+      margin: 1.5rem 0 2rem;
     }
-    #about {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      line-height: 1.6;
+    .tickets a {
+      display: inline-block;
+      background: #222;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
       font-size: 1.1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
     }
-    #about h2 {
+    .tickets a:hover {
+      background: #444;
+    }
+    .social-links {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .social-links img {
+      width: 60px; /* reduced by 25% */
+      height: 60px;
+      margin: 0 0.75rem;
+      vertical-align: middle;
+    }
+    .about {
+      background: #f9f9f9;
+      padding: 2rem 1.5rem;
+      border-top: 2px solid #ccc;
+    }
+    .about h2 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
-    #about a {
-      color: #0073e6;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    #about a:hover {
-      text-decoration: underline;
-    }
-    .tickets-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #fff;
-      background-color: #0073e6;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .tickets-btn:hover {
-      background-color: #005bb5;
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 1rem;
+      text-align: justify;
     }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 1rem;
       font-size: 0.9rem;
       color: #555;
     }
@@ -148,70 +103,32 @@
 <body>
   <header>
     <h1>Crtive.LA</h1>
-    <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
-
-    <!-- Get Tickets button -->
-    <a href="#" class="tickets-btn">🎟 Get Tickets</a>
-
-    <!-- Follow Us Section -->
-    <section id="socials-top">
-      <h2>Follow Us</h2>
-      <div class="social-links">
-        <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
-        </a>
-      </div>
-    </section>
-
     <nav>
-      <a href="#latest-episode">Latest</a>
-      <a href="#videos">Episodes</a>
       <a href="#about">About</a>
+      <a href="https://www.youtube.com/@crtivela" target="_blank" rel="noopener">Episodes</a>
+      <a href="https://www.instagram.com/crtivela" target="_blank" rel="noopener">Photos</a>
     </nav>
+    <div class="tickets">
+      <a href="#">Get Tickets</a>
+    </div>
   </header>
 
-  <!-- Latest Episode Hero -->
-  <section id="latest-episode">
-    <h2>Latest Episode</h2>
-    <div class="hero-video">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" 
-              frameborder="0" 
-              loading="lazy"
-              allowfullscreen 
-              title="Latest crtive.la Episode"></iframe>
-    </div>
-    <p class="episode-description">
-      🎨 This week we sit down with <strong>Guest Name</strong> to explore their journey from 
-      humble beginnings to breakthrough success. 
-    </p>
-  </section>
+  <div class="social-links">
+    <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+    </a>
+    <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+    </a>
+  </div>
 
-  <!-- Video Carousel -->
-  <section id="videos">
-    <h2>Watch More Episodes</h2>
-    <div class="carousel">
-      <button class="prev" aria-label="Previous video">⟨</button>
-      <div class="carousel-track">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 1"></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 2"></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 3"></iframe>
-      </div>
-      <button class="next" aria-label="Next video">⟩</button>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About</h2>
+  <section id="about" class="about">
+    <h2>About Crtive.LA</h2>
     <p>
-      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live (during the school term) with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio. 
-      <a href="#">Get tickets here!</a>
+      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live (during the school term) with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio. <a href="#">Get tickets here!</a>
     </p>
     <p>
       The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts, with the goal of giving students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share their journeys.
@@ -219,9 +136,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Crtive.LA</p>
+    <p>&copy; 2025 Crtive.LA. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
