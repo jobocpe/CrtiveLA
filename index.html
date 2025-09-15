@@ -113,16 +113,12 @@
       }
     }
 
-    .hero-video iframe {
-      width: 100%;
-      height: 500px;
-      max-width: 900px;
-    }
     .carousel-track iframe {
       width: 300px;
       height: 170px;
       margin: 10px;
     }
+
     #about {
       max-width: 800px;
       margin: 50px auto;
@@ -158,7 +154,6 @@
 
     <!-- Navigation Above Ticket Link -->
     <nav>
-      <a href="#latest-episode">Latest</a>
       <a href="#videos">Episodes</a>
       <a href="#about">About</a>
     </nav>
@@ -186,28 +181,13 @@
     </section>
   </header>
 
-  <!-- Latest Episode Hero -->
-  <section id="latest-episode">
-    <h2>Latest Episode</h2>
-    <div class="hero-video">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" 
-              frameborder="0" 
-              loading="lazy"
-              allowfullscreen 
-              title="Latest crtive.la Episode"></iframe>
-    </div>
-    <p class="episode-description">
-      🎨 This week we sit down with <strong>Guest Name</strong> to explore their journey from 
-      humble beginnings to breakthrough success. 
-    </p>
-  </section>
-
-  <!-- Video Carousel -->
+  <!-- Episodes Slider -->
   <section id="videos">
-    <h2>Watch More Episodes</h2>
+    <h2>Episodes</h2>
     <div class="carousel">
       <button class="prev" aria-label="Previous video">⟨</button>
       <div class="carousel-track">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" loading="lazy" frameborder="0" allowfullscreen title="Latest crtive.la Episode"></iframe>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 1"></iframe>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 2"></iframe>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 3"></iframe>
