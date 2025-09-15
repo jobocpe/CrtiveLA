@@ -115,8 +115,8 @@
 
     /* Carousel - Highlight latest episode */
     .carousel-track iframe:first-child {
-      width: 350px;  /* slightly wider */
-      height: 200px; /* slightly taller */
+      width: 350px;
+      height: 200px;
       border: 3px solid #0073e6;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 115, 230, 0.3);
@@ -126,8 +126,6 @@
       transform: scale(1.05);
       box-shadow: 0 6px 15px rgba(0, 115, 230, 0.5);
     }
-
-    /* Keep other episodes smaller */
     .carousel-track iframe:not(:first-child) {
       width: 300px;
       height: 170px;
@@ -136,26 +134,27 @@
       box-shadow: none;
     }
 
-    #about {
+    #about, #contact {
       max-width: 800px;
       margin: 50px auto;
       padding: 20px;
       line-height: 1.6;
       font-size: 1.1rem;
     }
-    #about h2 {
+    #about h2, #contact h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
     }
-    #about a {
+    #about a, #contact a {
       color: #0073e6;
       font-weight: bold;
       text-decoration: none;
     }
-    #about a:hover {
+    #about a:hover, #contact a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -173,6 +172,7 @@
     <nav>
       <a href="#videos">Episodes</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <!-- Prominent Ticket Link -->
@@ -223,6 +223,28 @@
     <p>
       The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts, with the goal of giving students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share their journeys.
     </p>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xgvlbygd" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+      <label>
+        Name:
+        <input type="text" name="name" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
+      </label>
+      <label>
+        Message:
+        <textarea name="message" rows="5" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+      </label>
+      <button type="submit" style="width: 150px; padding: 12px; font-size: 1rem; font-weight: bold; color: #fff; background-color: #0073e6; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
+        Send
+      </button>
+    </form>
   </section>
 
   <footer>
