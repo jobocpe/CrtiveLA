@@ -113,10 +113,27 @@
       }
     }
 
-    .carousel-track iframe {
+    /* Carousel - Highlight latest episode */
+    .carousel-track iframe:first-child {
+      width: 350px;  /* slightly wider */
+      height: 200px; /* slightly taller */
+      border: 3px solid #0073e6;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 115, 230, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .carousel-track iframe:first-child:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 115, 230, 0.5);
+    }
+
+    /* Keep other episodes smaller */
+    .carousel-track iframe:not(:first-child) {
       width: 300px;
       height: 170px;
-      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: none;
     }
 
     #about {
