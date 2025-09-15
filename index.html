@@ -44,7 +44,8 @@
     "sameAs": [
       "https://twitter.com/crtivela",
       "https://instagram.com/crtivela",
-      "https://youtube.com/@crtivela"
+      "https://youtube.com/@crtivela",
+      "https://www.tiktok.com/@crtivela"
     ]
   }
   </script>
@@ -68,8 +69,8 @@
       flex-wrap: wrap;
     }
     .social-links a img {
-      width: 80px;   
-      height: 80px;
+      width: 60px;   /* reduced 25% from 80px */
+      height: 60px;  /* reduced 25% from 80px */
       transition: transform 0.3s, filter 0.3s;
     }
     .social-links a img:hover {
@@ -78,8 +79,8 @@
     }
     @media (max-width: 600px) {
       .social-links a img {
-        width: 60px;
-        height: 60px;
+        width: 45px;  /* 25% smaller than original 60px */
+        height: 45px;
       }
     }
     header {
@@ -128,12 +129,25 @@
       font-size: 0.9rem;
       color: #555;
     }
+    .ticket-link {
+      display: inline-block;
+      margin: 15px 0;
+      font-weight: bold;
+      color: #0073e6;
+      text-decoration: none;
+    }
+    .ticket-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Crtive.LA</h1>
     <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
+
+    <!-- Ticket Link Above Navigation -->
+    <a href="#about" class="ticket-link">Get Tickets Here!</a>
 
     <!-- Follow Us Section -->
     <section id="socials-top">
@@ -147,6 +161,9 @@
         </a>
         <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+        </a>
+        <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
         </a>
       </div>
     </section>
@@ -206,4 +223,4 @@
 
   <script src="script.js"></script>
 </body>
-</html>'/
+</html>
