@@ -4,76 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crtive.LA | Stories Behind the Work</title>
-
-  <!-- Meta Description -->
-  <meta name="description" content="Crtive.LA: Stories Behind the Work. Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://crtive.la/">
-
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="Crtive.LA | Stories Behind the Work">
-  <meta property="og:description" content="Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://crtive.la/">
-  <meta property="og:image" content="https://crtive.la/images/preview.PNG">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Crtive.LA | Stories Behind the Work">
-  <meta name="twitter:description" content="Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
-  <meta name="twitter:image" content="https://crtive.la/images/preview.PNG">
-  <meta name="twitter:site" content="@crtivela">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "PodcastSeries",
-    "name": "Crtive.LA | Stories Behind the Work",
-    "url": "https://crtive.la/",
-    "description": "Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.",
-    "inLanguage": "en",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Crtive.LA"
-    },
-    "sameAs": [
-      "https://twitter.com/crtivela",
-      "https://instagram.com/crtivela",
-      "https://youtube.com/@crtivela",
-      "https://www.tiktok.com/@crtivela"
-    ]
-  }
-  </script>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
   <style>
     html {
-      scroll-behavior: smooth; /* Smooth scrolling */
+      scroll-behavior: smooth;
     }
 
     header {
       text-align: center;
       padding: 20px;
     }
+
+    header h1 {
+      font-size: 2.75rem; /* increased ~10% */
+    }
+
+    header p {
+      margin-top: 12px; 
+      margin-bottom: 12px; 
+      line-height: 1.45; /* reduced spacing ~5% */
+    }
+
     header nav a {
-      margin: 0 15px;
+      margin: 0 18px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: bolder; /* stronger bold */
+      font-size: 1.2rem; /* larger */
       color: #111;
     }
 
-    /* Ticket Link Prominent */
     .ticket-link {
       display: inline-block;
       margin: 20px 0;
       font-weight: bold;
-      font-size: 1.4rem;
+      font-size: 1.33rem; /* 5% smaller than 1.4rem */
       color: #fff;
       background-color: #0073e6;
       padding: 12px 25px;
@@ -102,7 +66,7 @@
       flex-wrap: wrap;
     }
     .social-links a img {
-      width: 60px;   
+      width: 60px;
       height: 60px;
       transition: transform 0.3s, filter 0.3s;
     }
@@ -117,7 +81,6 @@
       }
     }
 
-    /* Carousel - Highlight latest episode */
     .carousel-track iframe:first-child {
       width: 350px;
       height: 200px;
@@ -172,34 +135,12 @@
     <h1>Crtive.LA</h1>
     <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
 
-    <!-- Navigation Above Ticket Link -->
+    <!-- Navigation -->
     <nav>
       <a href="#videos">Episodes</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
-    <!-- Prominent Ticket Link -->
-    <a href="#about" class="ticket-link">Get Tickets Here!</a>
-
-    <!-- Follow Us Section Below Ticket Link -->
-    <section id="socials-top">
-      <h2>Follow Us</h2>
-      <div class="social-links">
-        <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
-        </a>
-        <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
-        </a>
-      </div>
-    </section>
   </header>
 
   <!-- Episodes Slider -->
@@ -217,6 +158,25 @@
     </div>
   </section>
 
+  <!-- Follow Us Section moved here -->
+  <section id="socials-top">
+    <h2>Follow Us</h2>
+    <div class="social-links">
+      <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+      </a>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about">
     <h2>About</h2>
@@ -228,6 +188,11 @@
       The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts, with the goal of giving students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share their journeys.
     </p>
   </section>
+
+  <!-- Ticket Link moved here -->
+  <div style="text-align:center; margin:20px;">
+    <a href="#about" class="ticket-link">Get Tickets Here!</a>
+  </div>
 
   <!-- Contact Form -->
   <section id="contact">
