@@ -11,7 +11,7 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://crtive.la/">
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Crtive.LA | Stories Behind the Work">
   <meta property="og:description" content="Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
   <meta property="og:type" content="website">
@@ -50,33 +50,41 @@
   }
   </script>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
   <style>
-    html {
-      scroll-behavior: smooth; /* Smooth scrolling */
-    }
+    html { scroll-behavior: smooth; }
 
     header {
       text-align: center;
       padding: 20px;
     }
+    header h1 {
+      font-size: 3.3rem; /* 10% larger */
+      margin: 0;
+    }
+    header p {
+      font-size: 1.1rem;
+      letter-spacing: 0.95px; /* reduced 5% */
+      margin: 10px 0;
+    }
+
+    /* Navigation */
     header nav a {
       margin: 0 15px;
       text-decoration: none;
+      font-size: 1.2rem; /* larger */
       font-weight: bold;
       color: #111;
     }
 
-    /* Ticket Link Prominent */
+    /* Ticket Link */
     .ticket-link {
       display: inline-block;
-      margin: 20px 0;
+      margin: 25px 0;
       font-weight: bold;
-      font-size: 1.4rem;
+      font-size: 1.3rem; /* 5% smaller */
       color: #fff;
       background-color: #0073e6;
-      padding: 12px 25px;
+      padding: 11px 23px;
       border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s, transform 0.3s;
@@ -86,6 +94,7 @@
       transform: scale(1.05);
     }
 
+    /* Follow Us */
     #socials-top {
       text-align: center;
       margin: 30px 0;
@@ -102,7 +111,7 @@
       flex-wrap: wrap;
     }
     .social-links a img {
-      width: 60px;   
+      width: 60px;
       height: 60px;
       transition: transform 0.3s, filter 0.3s;
     }
@@ -117,25 +126,17 @@
       }
     }
 
-    /* Carousel - Highlight latest episode */
+    /* Episodes */
     .carousel-track iframe:first-child {
       width: 350px;
       height: 200px;
       border: 3px solid #0073e6;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 115, 230, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .carousel-track iframe:first-child:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 115, 230, 0.5);
     }
     .carousel-track iframe:not(:first-child) {
       width: 300px;
       height: 170px;
-      border: none;
-      border-radius: 5px;
-      box-shadow: none;
     }
 
     #about, #contact {
@@ -172,34 +173,12 @@
     <h1>Crtive.LA</h1>
     <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
 
-    <!-- Navigation Above Ticket Link -->
+    <!-- Navigation -->
     <nav>
       <a href="#videos">Episodes</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
-    <!-- Prominent Ticket Link -->
-    <a href="#about" class="ticket-link">Get Tickets Here!</a>
-
-    <!-- Follow Us Section Below Ticket Link -->
-    <section id="socials-top">
-      <h2>Follow Us</h2>
-      <div class="social-links">
-        <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
-        </a>
-        <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
-        </a>
-      </div>
-    </section>
   </header>
 
   <!-- Episodes Slider -->
@@ -217,17 +196,40 @@
     </div>
   </section>
 
+  <!-- Follow Us Section -->
+  <section id="socials-top">
+    <h2>Follow Us</h2>
+    <div class="social-links">
+      <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+      </a>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about">
     <h2>About</h2>
     <p>
-      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio. 
-      <a href="#">Get tickets here!</a>
+      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio.
     </p>
     <p>
       The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts, with the goal of giving students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share their journeys.
     </p>
   </section>
+
+  <!-- Ticket Link moved here -->
+  <div style="text-align:center;">
+    <a href="#about" class="ticket-link">Get Tickets Here!</a>
+  </div>
 
   <!-- Contact Form -->
   <section id="contact">
@@ -254,7 +256,5 @@
   <footer>
     <p>© 2025 Crtive.LA</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
