@@ -10,19 +10,26 @@
       scroll-behavior: smooth;
     }
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #111;
+    }
+
     header {
       text-align: center;
       padding: 20px;
     }
 
     header h1 {
-      font-size: 2.75rem; /* increased ~10% */
+      font-size: 2.75rem;
+      margin: 0;
     }
 
     header p {
-      margin-top: 12px; 
-      margin-bottom: 12px; 
-      line-height: 1.45; /* reduced spacing ~5% */
+      margin: 12px 0;
+      line-height: 1.45;
     }
 
     header nav a {
@@ -33,11 +40,15 @@
       color: #111;
     }
 
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
     .ticket-link {
       display: inline-block;
       margin: 20px 0;
       font-weight: bold;
-      font-size: 1.33rem; /* 5% smaller */
+      font-size: 1.33rem;
       color: #fff;
       background-color: #0073e6;
       padding: 12px 25px;
@@ -62,32 +73,55 @@
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
       flex-wrap: wrap;
     }
     .social-links a img {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       transition: transform 0.3s, filter 0.3s;
     }
     .social-links a img:hover {
       transform: scale(1.2);
       filter: brightness(1.2);
     }
-    @media (max-width: 600px) {
-      .social-links a img {
-        width: 45px;
-        height: 45px;
-      }
+
+    /* Episodes Slider */
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      gap: 10px;
     }
 
+    .carousel-track {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      height: 8px;
+    }
+    .carousel-track::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 115, 230, 0.5);
+      border-radius: 4px;
+    }
+
+    .carousel-track iframe {
+      flex: 0 0 auto;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
     .carousel-track iframe:first-child {
       width: 350px;
       height: 200px;
       border: 3px solid #0073e6;
-      border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 115, 230, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
     }
     .carousel-track iframe:first-child:hover {
       transform: scale(1.05);
@@ -97,15 +131,14 @@
       width: 300px;
       height: 170px;
       border: none;
-      border-radius: 5px;
       box-shadow: none;
     }
 
+    /* About and Contact Sections */
     #about, #contact {
       max-width: 800px;
       margin: 50px auto;
-      padding: 20px;
-      line-height: 1.6;
+      padding: 0 20px;
       font-size: 1.1rem;
     }
     #about h2, #contact h2 {
@@ -122,11 +155,82 @@
       text-decoration: underline;
     }
 
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    form label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    form button {
+      width: 150px;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #005bb5;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
       color: #555;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.25rem;
+      }
+      header nav a {
+        font-size: 1rem;
+        margin: 0 12px;
+      }
+      .carousel-track iframe:first-child {
+        width: 90%;
+        height: auto;
+      }
+      .carousel-track iframe:not(:first-child) {
+        width: 80%;
+        height: auto;
+      }
+      .social-links a img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      .ticket-link {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
@@ -135,31 +239,26 @@
     <h1>Crtive.LA</h1>
     <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
 
-    <!-- Navigation -->
     <nav>
       <a href="#videos">Episodes</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener">Tickets</a>
+      <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener" aria-label="Buy Tickets">Tickets</a>
     </nav>
   </header>
 
-  <!-- Episodes Slider -->
   <section id="videos">
     <h2>Episodes</h2>
     <div class="carousel">
-      <button class="prev" aria-label="Previous video">⟨</button>
       <div class="carousel-track">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" loading="lazy" frameborder="0" allowfullscreen title="Latest crtive.la Episode"></iframe>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 1"></iframe>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 2"></iframe>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 3"></iframe>
       </div>
-      <button class="next" aria-label="Next video">⟩</button>
     </div>
   </section>
 
-  <!-- Follow Us Section -->
   <section id="socials-top">
     <h2>Follow Us</h2>
     <div class="social-links">
@@ -178,41 +277,36 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About</h2>
     <p>
-      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio. 
+      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio.
     </p>
     <p>
-      The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts, with the goal of giving students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share their journeys.
+      The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts. The project’s the goal is to give students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share and learn.
     </p>
   </section>
 
-  <!-- Ticket Link -->
   <div style="text-align:center; margin:20px;">
     <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener" class="ticket-link">Get Tickets Here!</a>
   </div>
 
-  <!-- Contact Form -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/xgvlbygd" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    <form action="https://formspree.io/f/xgvlbygd" method="POST">
       <label>
         Name:
-        <input type="text" name="name" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
+        <input type="text" name="name" required>
       </label>
       <label>
         Email:
-        <input type="email" name="email" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
+        <input type="email" name="email" required>
       </label>
       <label>
         Message:
-        <textarea name="message" rows="5" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+        <textarea name="message" rows="5" required></textarea>
       </label>
-      <button type="submit" style="width: 150px; padding: 12px; font-size: 1rem; font-weight: bold; color: #fff; background-color: #0073e6; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
-        Send
-      </button>
+      <button type="submit">Send</button>
     </form>
   </section>
 
