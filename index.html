@@ -4,115 +4,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crtive.LA | Stories Behind the Work</title>
-
-  <!-- Meta Description -->
-  <meta name="description" content="Crtive.LA: Stories Behind the Work. Explore the journeys of LA creatives through in-depth interviews and inspiring conversations.">
-
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #111;
-      color: #eee;
-      text-align: center;
+    html {
+      scroll-behavior: smooth;
     }
+
     header {
-      background: #222;
+      text-align: center;
       padding: 20px;
     }
+
     header h1 {
-      font-size: 3.3em; /* 10% larger */
-      margin: 0;
+      font-size: 2.75rem; /* increased ~10% */
     }
+
     header p {
-      margin: 5px 0 0;
-      letter-spacing: -0.05em; /* reduce spacing by 5% */
+      margin-top: 12px; 
+      margin-bottom: 12px; 
+      line-height: 1.45; /* reduced spacing ~5% */
     }
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #eee;
+
+    header nav a {
+      margin: 0 18px;
       text-decoration: none;
-      font-size: 1.2em; /* larger */
-      font-weight: bold; /* bold */
+      font-weight: bolder;
+      font-size: 1.2rem;
+      color: #111;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    .ticket-link {
+      display: inline-block;
+      margin: 20px 0;
+      font-weight: bold;
+      font-size: 1.33rem; /* 5% smaller */
+      color: #fff;
+      background-color: #0073e6;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
     }
-    .video-slider {
-      margin: 30px auto;
-      max-width: 800px;
+    .ticket-link:hover {
+      background-color: #005bb5;
+      transform: scale(1.05);
     }
-    .follow {
+
+    #socials-top {
+      text-align: center;
       margin: 30px 0;
     }
-    .follow a {
-      margin: 0 10px;
-      color: #eee;
-      text-decoration: none;
+    #socials-top h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
-    .about {
-      margin: 30px auto;
-      max-width: 800px;
-      padding: 0 20px;
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
     }
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 18px; /* 5% smaller */
-      background: #444;
-      color: #fff;
-      text-decoration: none;
+    .social-links a img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s, filter 0.3s;
+    }
+    .social-links a img:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+    @media (max-width: 600px) {
+      .social-links a img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .carousel-track iframe:first-child {
+      width: 350px;
+      height: 200px;
+      border: 3px solid #0073e6;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 115, 230, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .carousel-track iframe:first-child:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 115, 230, 0.5);
+    }
+    .carousel-track iframe:not(:first-child) {
+      width: 300px;
+      height: 170px;
+      border: none;
       border-radius: 5px;
-      font-size: 1em;
+      box-shadow: none;
     }
-    .button:hover {
-      background: #666;
+
+    #about, #contact {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    #about h2, #contact h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    #about a, #contact a {
+      color: #0073e6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    #about a:hover, #contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Crtive.LA</h1>
-    <p>Stories Behind the Work</p>
+    <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
+
+    <!-- Navigation -->
     <nav>
-      <a href="#episodes">Episodes</a>
+      <a href="#videos">Episodes</a>
       <a href="#about">About</a>
-      <a href="https://gofan.co/app/school/CA100315" target="_blank">Tickets</a>
       <a href="#contact">Contact</a>
+      <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener">Tickets</a>
     </nav>
   </header>
 
-  <section id="episodes" class="video-slider">
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/?listType=playlist&list=UUMn0kLKbH1cFv2xE0pQ5m_g" 
-      title="Crtive.LA Episodes" frameborder="0" allowfullscreen></iframe>
+  <!-- Episodes Slider -->
+  <section id="videos">
+    <h2>Episodes</h2>
+    <div class="carousel">
+      <button class="prev" aria-label="Previous video">⟨</button>
+      <div class="carousel-track">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" loading="lazy" frameborder="0" allowfullscreen title="Latest crtive.la Episode"></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 1"></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 2"></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" loading="lazy" frameborder="0" allowfullscreen title="crtive.la Episode 3"></iframe>
+      </div>
+      <button class="next" aria-label="Next video">⟩</button>
+    </div>
   </section>
 
-  <section class="follow">
+  <!-- Follow Us Section -->
+  <section id="socials-top">
     <h2>Follow Us</h2>
-    <a href="https://instagram.com/crtivela" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@crtivela" target="_blank">TikTok</a>
-    <a href="https://youtube.com/@crtivela" target="_blank">YouTube</a>
+    <div class="social-links">
+      <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+      </a>
+    </div>
   </section>
 
-  <section id="about" class="about">
+  <!-- About Section -->
+  <section id="about">
     <h2>About</h2>
-    <p>Crtive.LA is a student produced podcast that explores the life and work of people working in a variety of creative fields connected with Los Angeles. 
-       The podcast is recorded (during term) with a live audience at 4 pm on the first Tuesday of the month in the photo studio.</p>
-    <a href="https://gofan.co/app/school/CA100315" class="button" target="_blank">Get Tickets</a>
+    <p>
+      Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio. 
+    </p>
+    <p>
+      The podcast was conceived in 2025 by Oliver Shipley, a photography teacher at Ramon C. Corine School of Visual & Performing Arts, with the goal of giving students hands-on experience in media production while learning directly from the creative professionals. Crtive.LA brings together storytelling, education, and community—offering a unique platform for both students and local creatives to share their journeys.
+    </p>
   </section>
 
-  <section id="contact" class="about">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xgvlbygd" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required style="width:100%;margin:5px 0;padding:10px;text-align:left;">
-      <input type="email" name="email" placeholder="Your Email" required style="width:100%;margin:5px 0;padding:10px;text-align:left;">
-      <textarea name="message" placeholder="Your Message" required style="width:100%;margin:5px 0;padding:10px;text-align:left;"></textarea>
-      <button type="submit" class="button">Send</button>
+  <!-- Ticket Link -->
+  <div style="text-align:center; margin:20px;">
+    <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener" class="ticket-link">Get Tickets Here!</a>
+  </div>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xgvlbygd" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+      <label>
+        Name:
+        <input type="text" name="name" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
+      </label>
+      <label>
+        Message:
+        <textarea name="message" rows="5" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+      </label>
+      <button type="submit" style="width: 150px; padding: 12px; font-size: 1rem; font-weight: bold; color: #fff; background-color: #0073e6; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
+        Send
+      </button>
     </form>
   </section>
+
+  <footer>
+    <p>© 2025 Crtive.LA</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
