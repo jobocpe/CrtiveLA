@@ -17,12 +17,14 @@
 
     header h1 {
       font-size: 2.75rem; /* increased ~10% */
+      text-transform: uppercase;
     }
 
     header p {
       margin-top: 12px; 
       margin-bottom: 12px; 
       line-height: 1.45; /* reduced spacing ~5% */
+      text-transform: uppercase;
     }
 
     header nav a {
@@ -31,6 +33,7 @@
       font-weight: bolder;
       font-size: 1.2rem;
       color: #111;
+      text-transform: uppercase;
     }
 
     .ticket-link {
@@ -44,20 +47,22 @@
       border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s, transform 0.3s;
+      text-transform: uppercase;
     }
     .ticket-link:hover {
       background-color: #005bb5;
       transform: scale(1.05);
     }
 
-    #socials-top {
+    #socials-top, #socials-bottom {
       text-align: center;
       margin: 30px 0;
     }
-    #socials-top h2 {
+    #socials-top h2, #socials-bottom h2 {
       font-size: 2rem;
       margin-bottom: 20px;
       font-weight: bold;
+      text-transform: uppercase;
     }
     .social-links {
       display: flex;
@@ -101,24 +106,25 @@
       box-shadow: none;
     }
 
-    #about, #contact {
+    #about {
       max-width: 800px;
       margin: 50px auto;
       padding: 20px;
       line-height: 1.6;
       font-size: 1.1rem;
     }
-    #about h2, #contact h2 {
+    #about h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
+      text-transform: uppercase;
     }
-    #about a, #contact a {
+    #about a {
       color: #0073e6;
       font-weight: bold;
       text-decoration: none;
     }
-    #about a:hover, #contact a:hover {
+    #about a:hover {
       text-decoration: underline;
     }
 
@@ -132,21 +138,20 @@
 </head>
 <body>
   <header>
-    <h1>Crtive.LA</h1>
-    <p>Exploring the work and careers of LA creatives — a student-produced podcast.</p>
+    <h1>CRTIVE.LA</h1>
+    <p>EXPLORING THE WORK AND CAREERS OF LA CREATIVES — A STUDENT-PRODUCED PODCAST.</p>
 
     <!-- Navigation -->
     <nav>
-      <a href="#videos">Episodes</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener">Tickets</a>
+      <a href="#videos">EPISODES</a>
+      <a href="#about">ABOUT</a>
+      <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener">TICKETS</a>
     </nav>
   </header>
 
   <!-- Episodes Slider -->
   <section id="videos">
-    <h2>Episodes</h2>
+    <h2>EPISODES</h2>
     <div class="carousel">
       <button class="prev" aria-label="Previous video">⟨</button>
       <div class="carousel-track">
@@ -159,9 +164,9 @@
     </div>
   </section>
 
-  <!-- Follow Us Section -->
+  <!-- Follow Us Section Top -->
   <section id="socials-top">
-    <h2>Follow Us</h2>
+    <h2>FOLLOW US</h2>
     <div class="social-links">
       <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
@@ -180,7 +185,7 @@
 
   <!-- About Section -->
   <section id="about">
-    <h2>About</h2>
+    <h2>ABOUT</h2>
     <p>
       Crtive.LA is a student-produced podcast that explores the lives and work of people across a wide range of creative fields in Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Tuesday of the month in the school’s photo studio. 
     </p>
@@ -191,29 +196,26 @@
 
   <!-- Ticket Link -->
   <div style="text-align:center; margin:20px;">
-    <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener" class="ticket-link">Get Tickets Here!</a>
+    <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener" class="ticket-link">GET TICKETS HERE!</a>
   </div>
 
-  <!-- Contact Form -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/xgvlbygd" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-      <label>
-        Name:
-        <input type="text" name="name" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
-      </label>
-      <label>
-        Email:
-        <input type="email" name="email" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;">
-      </label>
-      <label>
-        Message:
-        <textarea name="message" rows="5" required style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-      </label>
-      <button type="submit" style="width: 150px; padding: 12px; font-size: 1rem; font-weight: bold; color: #fff; background-color: #0073e6; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
-        Send
-      </button>
-    </form>
+  <!-- Additional Follow Us Section Below Ticket Button -->
+  <section id="socials-bottom">
+    <h2>FOLLOW US</h2>
+    <div class="social-links">
+      <a href="https://twitter.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+      </a>
+    </div>
   </section>
 
   <footer>
