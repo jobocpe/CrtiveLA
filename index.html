@@ -56,6 +56,7 @@
 
     h2 {
       text-transform: uppercase;
+      text-align: center; /* CENTER all section titles */
     }
 
     .ticket-link {
@@ -134,17 +135,20 @@
       transition: transform 0.5s ease;
     }
 
-    .carousel-track iframe {
+    .carousel-track .iframe-wrapper {
       min-width: 100%;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
       height: 0;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      border: none;
     }
 
-    .carousel-track iframe {
+    .carousel-track .iframe-wrapper iframe {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      border: none;
     }
 
     .carousel button.prev,
@@ -178,8 +182,6 @@
     }
 
     #about h2 {
-      text-align: center;
-      font-size: 2rem;
       margin-bottom: 20px;
     }
 
@@ -198,23 +200,6 @@
       padding: 20px;
       font-size: 0.9rem;
       color: #555;
-    }
-
-    /* Responsive iframe container */
-    .iframe-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* 16:9 ratio */
-      height: 0;
-    }
-
-    .iframe-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
     }
   </style>
 </head>
