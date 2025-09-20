@@ -84,6 +84,16 @@ button.prev:hover, button.next:hover {
   text-align: left;
 }
 
+/* Episodes header styles */
+.episodes-header {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 2rem auto 1rem auto;
+  max-width: 1200px;  /* align with video block width */
+}
+
 /* Social links */
 #socials .social-links {
   margin: 2rem 0;
@@ -141,15 +151,6 @@ footer {
   border-top: 1px solid #ddd;
   font-size: 0.9rem;
   color: #444;
-}
-
-/* Episodes header styles */
-.episodes-header {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 3rem;
-  font-weight: 600;
-  color: #000;
 }
 
 /* Responsive */
