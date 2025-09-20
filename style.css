@@ -18,12 +18,12 @@
     }
 
     header {
-      text-align: center;
-      padding: 20px;
-      background-color: #111; /* dark grey header */
-      z-index: 10;
-      position: relative;
-    }
+  position: relative;
+  z-index: 10;
+  background-color: #111; /* solid dark grey */
+  text-align: center;
+  padding: 20px;
+}
 
     header h1 {
       font-size: 2.75rem;
