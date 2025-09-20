@@ -92,6 +92,8 @@ button.prev:hover, button.next:hover {
   text-align: center;
   margin: 2rem auto 1rem auto;
   max-width: 1200px;  /* align with video block width */
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd; /* subtle divider line */
 }
 
 /* Social links */
