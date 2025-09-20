@@ -1,176 +1,286 @@
-/* === Coop Himmelb(l)au Inspired Theme Variables === */
-:root {
-  --bg-color: #ffffff;       /* clean white */
-  --text-color: #111111;     /* almost black */
-  --header-bg: #f5f5f5;      /* subtle gray background for headers */
-  --button-bg: #111111;      /* strong contrast button */
-  --button-text: #ffffff;
-  --link-color: #111111;     /* black links */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crtive.LA | Stories Behind the Work</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* Apply theme */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin: 0;
-  background: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  text-align: left;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111; /* almost black */
+      color: #fff; /* white text by default */
+    }
 
-/* Header */
-header {
-  background: var(--header-bg);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #111; /* dark grey header */
+      z-index: 10;
+      position: relative;
+    }
 
-h1, h2, h3, h4 {
-  margin: 1.5em 0 0.5em;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
+    header h1 {
+      font-size: 2.75rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
 
-/* Buttons */
-button#theme-toggle,
-button.prev, button.next {
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  padding: 0.6rem 1.2rem;
-  cursor: pointer;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-button#theme-toggle:hover,
-button.prev:hover, button.next:hover {
-  background: #444;
-}
+    header p {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      line-height: 1.45;
+      text-transform: uppercase;
+      color: #fff;
+    }
 
-/* Latest Episode Hero */
-#latest-episode {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2rem;
-}
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-#latest-episode .hero-video {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  background: #eaeaea;
-}
+    header nav a {
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: 1.2rem;
+      color: #fff;
+      text-transform: uppercase;
+      transition: color 0.3s, transform 0.2s;
+    }
 
-#latest-episode .hero-video iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+    header nav a:hover {
+      color: #0073e6;
+      transform: scale(1.05);
+    }
 
-.episode-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+    }
 
-/* Episodes header styles */
-.episodes-header {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  margin: 2rem auto 1rem auto;
-  max-width: 1200px;  /* align with video block width */
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ddd; /* subtle divider line */
-}
+    .ticket-link {
+      display: inline-block;
+      margin: 20px 0;
+      font-weight: bold;
+      font-size: 1.33rem;
+      color: #fff;
+      background-color: #0073e6;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+      text-transform: uppercase;
+    }
 
-/* Social links */
-#socials .social-links {
-  margin: 2rem 0;
-  text-align: center;
-}
-#socials .social-links a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: var(--link-color);
-  font-weight: 500;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-}
-#socials .social-links a:hover {
-  border-color: #000;
-}
+    .ticket-link:hover {
+      background-color: #005bb5;
+      transform: scale(1.05);
+    }
 
-/* Carousel */
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 3rem auto;
-  max-width: 1200px;
-  position: relative;
-}
+    #socials-top, #socials-bottom {
+      text-align: center;
+      margin: 30px 0;
+      color: #fff;
+    }
 
-.carousel-track {
-  display: flex;
-  overflow: hidden;
-  width: 85%;
-  transition: transform 0.4s ease-in-out;
-  padding: 1rem 0;
-}
+    #socials-top h2, #socials-bottom h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
 
-.carousel-track iframe {
-  min-width: 100%;
-  height: 450px;
-  border: none;
-}
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-/* Chart */
-#charts {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem;
-  border-top: 1px solid #ddd;
-}
+    .social-links a img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s, filter 0.3s;
+      filter: invert(1); /* white icons */
+    }
 
-/* Footer */
-footer {
-  background: var(--header-bg);
-  padding: 2rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  font-size: 0.9rem;
-  color: #444;
-}
+    .social-links a img:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2) invert(1);
+    }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .episodes-header {
-    font-size: 2.5rem;
-  }
-  .carousel-track iframe {
-    height: 300px;
-  }
-}
+    @media (max-width: 600px) {
+      .social-links a img {
+        width: 45px;
+        height: 45px;
+      }
+    }
 
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  .episodes-header { font-size: 2rem; }
-  .carousel-track iframe { height: 220px; }
-  button.prev, button.next {
-    font-size: 1.2rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
+    /* Video header above Episodes */
+    .video-container video {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+    }
+
+    /* Single-video carousel */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-track .iframe-wrapper {
+      min-width: 100%;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+    }
+
+    .carousel-track .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .carousel button.prev,
+    .carousel button.next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      z-index: 2;
+      transition: background-color 0.3s;
+    }
+
+    .carousel button.prev:hover,
+    .carousel button.next:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel button.prev { left: 10px; }
+    .carousel button.next { right: 10px; }
+
+    #about {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    #about a {
+      color: #0073e6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #about a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CRTIVE.LA</h1>
+    <p>EXPLORING THE WORK AND CAREERS OF LA CREATIVES — A STUDENT-PRODUCED PODCAST.</p>
+
+    <nav>
+      <a href="#videos">EPISODES</a>
+      <a href="https://gofan.co/app/school/CA100315" target="_blank" rel="noopener">TICKETS</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+  </header>
+
+  <!-- Video Header -->
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="images/headervideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Episodes Slider -->
+  <section id="videos">
+    <h2>EPISODES</h2>
+    <div class="carousel">
+      <button class="prev" aria-label="Previous video">⟨</button>
+      <div class="carousel-track">
+        <div class="iframe-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_LATEST" allowfullscreen title="Latest crtive.la Episode"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen title="crtive.la Episode 1"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen title="crtive.la Episode 2"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen title="crtive.la Episode 3"></iframe>
+        </div>
+      </div>
+      <button class="next" aria-label="Next video">⟩</button>
+    </div>
+  </section>
+
+  <!-- Follow Us Top -->
+  <section id="socials-top">
+    <h2>FOLLOW US</h2>
+    <div class="social-links">
+      <a href="https://instagram.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+      </a>
+      <a href="https://www.tiktok.com/@crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok">
+      </a>
+      <a href="https://x.com/crtivela" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X">
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>ABOUT</h2>
+    <p>
+      Crtive.LA is a student-produced podcast that highlights the stories and work of creatives across Los Angeles. Each episode is recorded live with an audience at 4:00 PM on the first Thursday of the month at Ramon C. Cortines School of Visual & Performing Arts, inside the iconic <a href="https://coop-himmelblau.at/projects/central-los-angeles-area-high-school-9-for-the-visual-and-performing-arts/" target="_blank"> Coop Himmelblau</a> building in Downtown LA.
+    </p>
+    <p>
+      The project gives students hands-on experience in media production while providing the opportunity to learn directly from creative professionals. Blending storytelling, education, and community, Crtive.LA offers a unique platform where students and local artists can share, connect, and grow together.
+    </p>
+    <p>
