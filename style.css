@@ -1,58 +1,62 @@
-/* Newspaper Theme Variables */
+/* === Coop Himmelb(l)au Inspired Theme Variables === */
 :root {
-  --bg-color: #fdf6e3;       /* light cream paper */
-  --text-color: #1b1b1b;     /* dark ink */
-  --header-bg: #f0e8d8;      /* slightly darker cream */
-  --button-bg: #e0d8c0;      /* faded button look */
-  --button-text: #1b1b1b;
-  --link-color: #4b2e2e;     /* muted brown for links */
+  --bg-color: #ffffff;       /* clean white */
+  --text-color: #111111;     /* almost black */
+  --header-bg: #f5f5f5;      /* subtle gray background for headers */
+  --button-bg: #111111;      /* strong contrast button */
+  --button-text: #ffffff;
+  --link-color: #111111;     /* black links */
 }
 
 /* Apply theme */
 body {
-  font-family: 'Times New Roman', Georgia, serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   background: var(--bg-color);
   color: var(--text-color);
-  text-align: center;
-  transition: background 0.3s, color 0.3s;
   line-height: 1.6;
+  text-align: left;
 }
 
+/* Header */
 header {
   background: var(--header-bg);
   padding: 2rem;
-  border-bottom: 2px solid #ccc;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: background 0.3s;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: bold;
   letter-spacing: 1px;
 }
 
-button#theme-toggle {
-  margin-top: 1rem;
+h1, h2, h3, h4 {
+  margin: 1.5em 0 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+button#theme-toggle,
+button.prev, button.next {
   background: var(--button-bg);
   color: var(--button-text);
-  border: 1px solid #aaa;
-  padding: 0.5rem 1rem;
+  border: none;
+  padding: 0.6rem 1.2rem;
   cursor: pointer;
-  border-radius: 0; /* newspaper look */
-  font-family: 'Times New Roman', serif;
-  transition: background 0.3s, color 0.3s;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+button#theme-toggle:hover,
+button.prev:hover, button.next:hover {
+  background: #444;
 }
 
 /* Latest Episode Hero */
 #latest-episode {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: left;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
 }
 
 #latest-episode .hero-video {
@@ -60,9 +64,8 @@ button#theme-toggle {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  background: #f8f1e4;
+  margin-bottom: 2rem;
+  background: #eaeaea;
 }
 
 #latest-episode .hero-video iframe {
@@ -76,21 +79,26 @@ button#theme-toggle {
 .episode-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Social links */
 #socials .social-links {
-  margin: 1rem 0;
+  margin: 2rem 0;
+  text-align: center;
 }
 #socials .social-links a {
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
   color: var(--link-color);
-  font-weight: normal;
-  font-style: italic;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+#socials .social-links a:hover {
+  border-color: #000;
 }
 
 /* Carousel */
@@ -98,109 +106,68 @@ button#theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
-  max-width: 900px;
+  margin: 3rem auto;
+  max-width: 1200px;
   position: relative;
 }
 
 .carousel-track {
   display: flex;
   overflow: hidden;
-  width: 80%;
+  width: 85%;
   transition: transform 0.4s ease-in-out;
-  border-top: 1px dashed #bbb;
-  border-bottom: 1px dashed #bbb;
   padding: 1rem 0;
 }
 
 .carousel-track iframe {
   min-width: 100%;
-  height: 400px;
-  border: 1px solid #ccc;
+  height: 450px;
+  border: none;
 }
-
-/* Carousel buttons */
-button.prev, button.next {
-  background: var(--button-bg);
-  border: 1px solid #aaa;
-  color: var(--button-text);
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-button.prev { left: 0; }
-button.next { right: 0; }
 
 /* Chart */
 #charts {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-top: 1px solid #ddd;
 }
 
 /* Footer */
 footer {
   background: var(--header-bg);
-  padding: 1rem;
-  margin-top: 2rem;
-  border-top: 2px solid #ccc;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .carousel-track iframe {
-    height: 220px;
-  }
-
-  button.prev, button.next {
-    font-size: 1.5rem;
-    padding: 0.3rem 0.6rem;
-  }
-}
-
-/* Video container styles */
-.video-container {
-  width: 100%;
-  position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-  overflow: hidden;
-}
-
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #444;
 }
 
 /* Episodes header styles */
 .episodes-header {
   text-align: center;
-  margin-top: 20px;
-  font-size: 3rem; /* adjust as needed */
-  color: #000; /* or white if video is dark */
+  margin-top: 40px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000;
 }
 
-/* Responsive header adjustments */
+/* Responsive */
 @media (max-width: 1024px) {
   .episodes-header {
     font-size: 2.5rem;
   }
+  .carousel-track iframe {
+    height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
-  .episodes-header {
-    font-size: 2rem;
+  h1 { font-size: 2rem; }
+  .episodes-header { font-size: 2rem; }
+  .carousel-track iframe { height: 220px; }
+  button.prev, button.next {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
   }
 }
