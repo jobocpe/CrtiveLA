@@ -1,128 +1,219 @@
-/* Crtive.LA Style Sheet - Dark Theme and Video Fixes */
-
-/* Root Variables */
-:root {
-    --bg-color: #121212;          /* Dark grey background */
-    --text-color: #ffffff;        /* White text */
-    --header-bg-color: #1a1a1a;   /* Slightly lighter dark for headers */
-    --accent-color: #ff5500;      /* Accent color for buttons/links */
-    --link-color: #ff5500;        /* Link color */
-    --link-hover-color: #ffaa33;  /* Hover color */
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Body */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+  font-family: Arial, sans-serif;
+  background-color: #111; /* almost black */
+  color: #fff;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: var(--header-bg-color);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #333;
 }
 
-header h1, header nav a {
-    color: var(--text-color);
-    text-transform: uppercase;
-    text-decoration: none;
-    margin: 0 10px;
+header h1 {
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-/* Navigation */
-nav a {
-    color: var(--link-color);
-    transition: color 0.3s;
+header p {
+  margin: 12px 0;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-nav a:hover {
-    color: var(--link-hover-color);
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }
 
-/* Get Tickets Button */
-.get-tickets-btn {
-    background-color: var(--accent-color);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+header nav a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.2s;
 }
 
-.get-tickets-btn:hover {
-    background-color: #ffaa33;
+header nav a:hover {
+  color: #0073e6;
+  transform: scale(1.05);
 }
 
-/* Video Section */
-.video-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0;
+/* Tickets Button */
+.ticket-link {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 12px 25px;
+  background-color: #0073e6;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.video-block iframe, .video-block video {
-    width: 100%;
-    max-width: 960px;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 8px;
+.ticket-link:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
 }
 
-/* Episode Titles */
-.episode-title {
-    font-size: 2rem;
-    text-align: center;
-    margin: 20px 0 10px;
-    color: var(--text-color);
+/* Headings */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+/* Episodes Carousel */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.carousel iframe {
+  width: 560px;
+  height: 315px;
+  border: none;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.carousel iframe:first-child {
+  border: 3px solid #0073e6;
+  box-shadow: 0 0 20px rgba(0, 115, 230, 0.7);
+}
+
+.carousel iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 115, 230, 0.9);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.social-links a img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+  filter: invert(100%);
+}
+
+.social-links a:hover img {
+  transform: scale(1.1);
+  filter: invert(64%) sepia(82%) saturate(2307%) hue-rotate(197deg) brightness(96%) contrast(101%);
+}
+
+/* About Section */
+#about {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+#about a {
+  color: #0073e6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#about a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+}
+
+form button {
+  background: #0073e6;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #005bb5;
 }
 
 /* Footer */
 footer {
-    background-color: var(--header-bg-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px;
+  background-color: #111;
+  padding: 15px;
+  text-align: center;
+  border-top: 2px solid #333;
+  font-size: 0.9rem;
+  color: #fff;
 }
 
-footer a {
-    color: var(--link-color);
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel iframe {
+    width: 90%;
+    height: auto;
+  }
 
-footer a:hover {
-    color: var(--link-hover-color);
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
+  header nav {
     gap: 15px;
-    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
 }
 
-.social-icons a img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Adjust X (Twitter) icon to last */
-.social-icons a.x-icon {
-    order: 99;
-}
-
-/* Misc */
-h2, h3, h4, h5, h6 {
-    color: var(--text-color);
-}
-
-p {
-    line-height: 1.6;
-    color: var(--text-color);
+@media (max-width: 480px) {
+  .social-links a img {
+    width: 45px;
+    height: 45px;
+  }
 }
